@@ -19,10 +19,14 @@ char pass[] = "123456789";//Enter your WIFI password
 BLYNK_WRITE(V0) {
   digitalWrite(D0, param.asInt());
 }
+BLYNK_WRITE(V1) {
+  digitalWrite(D1, param.asInt());
+}
 
 void setup() {
   //Set the LED pin as an output pin
   pinMode(D0, OUTPUT);
+  pinMode(D1, OUTPUT);
   //Initialize the Blynk library
   Blynk.begin(auth, ssid, pass, "blynk.cloud", 80);
 }

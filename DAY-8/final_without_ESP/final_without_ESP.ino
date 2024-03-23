@@ -14,7 +14,7 @@
   void setup()
   {  
     Serial.begin(9600);   
-
+                                                                
     analogWrite(6,Contrast);
     pinMode(gas,INPUT);                         
     pinMode (buzzer, OUTPUT);
