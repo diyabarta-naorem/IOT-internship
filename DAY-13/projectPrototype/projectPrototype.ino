@@ -16,8 +16,8 @@ int sensorThres = 1500;
 
 BlynkTimer timer;
 char auth[] = BLYNK_AUTH_TOKEN;
-char ssid[] = "Test1";//Enter your WIFI name
-char pass[] = "123456789";//Enter your WIFI password
+char ssid[] = "Diyabarta Naorem";//Enter your WIFI name
+char pass[] = "diyabarta~naorem%";//Enter your WIFI password
 
 // //Get the button value
 BLYNK_WRITE(V0) {
@@ -50,7 +50,7 @@ void setup() {
       Serial.println(sensorData);     
       delay(1000); 
 
-    if(sensorData >= 400){
+    if(sensorData >= 500){
       digitalWrite(buzzer, HIGH);
       // Blynk.email("naoremdiyabarta@gmail.com", "Alert", "Gas Leakage Detected!");
       Blynk.logEvent("gas_alert","Gas Leakage Detected");
